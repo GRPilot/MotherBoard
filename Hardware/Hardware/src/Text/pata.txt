@@ -1,0 +1,16 @@
+
+
+
+
+Разъем PATA (IDE).
+
+PATA
+(Parallel Advanced Technology Attachment)
+
+ - параллельная шина (интерфейс) жесткого диска.
+
+
+IDE
+(Integrated Drive Electronics)
+
+- параллельный интерфейс подключения накопителей (жёстких дисков и оптических приводов).
