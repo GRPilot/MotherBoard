@@ -30,8 +30,8 @@
         {
             this.StartButton = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.SettingButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
+            this.SettingButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -39,12 +39,12 @@
             // 
             this.StartButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.StartButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.StartButton.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StartButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StartButton.ForeColor = System.Drawing.SystemColors.Control;
             this.StartButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.StartButton.Location = new System.Drawing.Point(104, 177);
+            this.StartButton.Location = new System.Drawing.Point(74, 196);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(100, 40);
+            this.StartButton.Size = new System.Drawing.Size(167, 40);
             this.StartButton.TabIndex = 0;
             this.StartButton.Text = "Начать игру";
             this.StartButton.UseVisualStyleBackColor = false;
@@ -60,35 +60,35 @@
             this.panel1.Size = new System.Drawing.Size(309, 336);
             this.panel1.TabIndex = 1;
             // 
-            // SettingButton
-            // 
-            this.SettingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.SettingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SettingButton.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.SettingButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.SettingButton.Location = new System.Drawing.Point(104, 223);
-            this.SettingButton.Name = "SettingButton";
-            this.SettingButton.Size = new System.Drawing.Size(100, 40);
-            this.SettingButton.TabIndex = 1;
-            this.SettingButton.Text = "Настройки";
-            this.SettingButton.UseVisualStyleBackColor = false;
-            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
-            // 
             // ExitButton
             // 
             this.ExitButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.ExitButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ExitButton.Font = new System.Drawing.Font("BankGothic Lt BT", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitButton.ForeColor = System.Drawing.SystemColors.Control;
             this.ExitButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
-            this.ExitButton.Location = new System.Drawing.Point(104, 268);
+            this.ExitButton.Location = new System.Drawing.Point(74, 287);
             this.ExitButton.Name = "ExitButton";
-            this.ExitButton.Size = new System.Drawing.Size(100, 40);
+            this.ExitButton.Size = new System.Drawing.Size(167, 40);
             this.ExitButton.TabIndex = 2;
             this.ExitButton.Text = "Выход";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            // 
+            // SettingButton
+            // 
+            this.SettingButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.SettingButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SettingButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.SettingButton.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.SettingButton.Location = new System.Drawing.Point(74, 242);
+            this.SettingButton.Name = "SettingButton";
+            this.SettingButton.Size = new System.Drawing.Size(167, 40);
+            this.SettingButton.TabIndex = 1;
+            this.SettingButton.Text = "Настройки";
+            this.SettingButton.UseVisualStyleBackColor = false;
+            this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
             // 
             // MainWindow
             // 
@@ -104,6 +104,7 @@
             this.Name = "MainWindow";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Hardware";
+            this.VisibleChanged += new System.EventHandler(this.MainWindow_VisibleChanged);
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 

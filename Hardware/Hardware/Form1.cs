@@ -12,9 +12,11 @@ namespace Hardware
 {
     public partial class MainWindow : Form
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            SetColorTheme(SettingWindow.BlackTheme);
         }
 
         private void StartButton_Click(object sender, EventArgs e)
@@ -35,5 +37,22 @@ namespace Hardware
             Application.Exit();
         }
 
+        public void SetColorTheme(bool isBlackColor)
+        {
+            if(isBlackColor)
+            {
+                BackColor = SettingWindow.BlackColorMainPanel;
+                StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.WhiteColorButtons));
+                StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.BlackColorButtons));
+            }
+            else
+            {
+                BackColor = SettingWindow.WhiteColorMainPanel;
+                StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.BlackColorButtons));
+                StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.WhiteColorButtons));
+            }
+        }
+
+        private void MainWindow_VisibleChanged(object sender, EventArgs e) => SetColorTheme(SettingWindow.BlackTheme);
     }
 }

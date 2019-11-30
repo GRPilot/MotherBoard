@@ -9,3 +9,14 @@ X:\2-й курс\Силахина\Hardware\Hardware\obj\Debug\Hardware.exe
 X:\2-й курс\Силахина\Hardware\Hardware\obj\Debug\Hardware.pdb
 X:\2-й курс\Силахина\Hardware\Hardware\obj\Debug\Hardware.GameWindow.resources
 X:\2-й курс\Силахина\Hardware\Hardware\obj\Debug\Hardware.SettingWindow.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\bin\Debug\Hardware.exe.config
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\bin\Debug\Hardware.exe
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\bin\Debug\Hardware.pdb
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.csprojAssemblyReference.cache
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.MainWindow.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.GameWindow.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.Properties.Resources.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.SettingWindow.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.csproj.GenerateResource.cache
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.exe
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.pdb
