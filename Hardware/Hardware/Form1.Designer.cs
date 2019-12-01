@@ -49,6 +49,8 @@
             this.StartButton.Text = "Начать игру";
             this.StartButton.UseVisualStyleBackColor = false;
             this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
+            this.StartButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.StartButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // panel1
             // 
@@ -74,6 +76,8 @@
             this.ExitButton.Text = "Выход";
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
+            this.ExitButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.ExitButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // SettingButton
             // 
@@ -89,6 +93,8 @@
             this.SettingButton.Text = "Настройки";
             this.SettingButton.UseVisualStyleBackColor = false;
             this.SettingButton.Click += new System.EventHandler(this.SettingButton_Click);
+            this.SettingButton.MouseEnter += new System.EventHandler(this.Button_MouseEnter);
+            this.SettingButton.MouseLeave += new System.EventHandler(this.Button_MouseLeave);
             // 
             // MainWindow
             // 

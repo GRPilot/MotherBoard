@@ -21,7 +21,7 @@ namespace Hardware
 
         // for closing
         bool formClosed;
-        Form mainFrom;
+        readonly Form mainFrom;
         public SettingWindow(Form OutMainForm)
         {
             mainFrom = OutMainForm;
