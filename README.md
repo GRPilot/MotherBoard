@@ -1,2 +1,2 @@
 # MotherBoard
-This application was made for my college
+🖥🎮This application was made for my college
