@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hardware.ItemsClass;
 using System.IO;
+using Microsoft.VisualBasic.CompilerServices;
 
 namespace Hardware
 {
@@ -19,6 +20,7 @@ namespace Hardware
         readonly Form mainFrom;
 
         Items[] items;
+        Label[] labels;
 
         public GameWindow(Form OutMainForm)
         {
@@ -31,7 +33,7 @@ namespace Hardware
             SetColorTheme(SettingWindow.BlackTheme);
             formClosed = true;
             LoadItems();
-            ShowItems();
+            ShowLabels(labels);
             
         }
 
@@ -64,30 +66,15 @@ namespace Hardware
             }
         }
 
-        void ShowItems()
+        void ShowLabels(Label[] label)
         {
-            Size size = new Size(
-                DetailsPanel.Width - DetailsPanel.Padding.Horizontal - 20, 
-                DetailsPanel.Height / 10 - DetailsPanel.Padding.Vertical
-            );
-            const float fontSize = 18.0f;
-
+            
             for (int i = 0; i < items.Length; i++)
             {
-                Label panel = new Label {
-                    Size = size,
-                    Text = items[i].GetName(),
-                    BackColor = Color.FromArgb(78, 78, 80),
-                    ForeColor = Color.White,
-                    Location = new Point(
-                        DetailsPanel.Padding.Left,
-                        (size.Height + DetailsPanel.Padding.Vertical) * i
-                    ),
-                    Font = new Font(FontFamily.GenericSansSerif, fontSize),
-                    TextAlign = ContentAlignment.MiddleCenter
-                };
-
-                DetailsPanel.Controls.Add(panel);
+                //TODO: DragDrop labels
+                
+                
+                DetailsPanel.Controls.Add(label[i]);
             }
         }
         void LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\items.txt")
@@ -106,29 +93,57 @@ namespace Hardware
                 }
 
                 items = new Items[count];
-                for (int j = 0; j < count; j++)
-                    items[j] = new Items();
+                labels = new Label[count];
+                for (int i = 0; i < count; i++)
+                    items[i] = new Items();
+
                 stream.Close();
                 stream = new StreamReader(file);
 
-                int i = 0;
-                while (!stream.EndOfStream && i < count)
+                int id = 0;
+                while (!stream.EndOfStream && id < count)
                 {
                     buff = Convert.ToChar(stream.Read()).ToString();
                     if (buff.Length > 0)
                         if (buff[0] == '#')
                         {
-                            items[i].SetName(stream.ReadLine());
-                            items[i].SetDescription(stream.ReadLine());
-                            i++;
+                            items[id].SetName(stream.ReadLine());
+                            items[id].SetDescription(stream.ReadLine());
+                            id++;
                         }
                 }
+
+                for (int i = 0; i < count; i++)
+                    labels[i] = CreateLabel(i);
             }
             catch (IOException e)
             {
                 MessageBox.Show(e.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+        private Label CreateLabel(int i)
+        {
+            Size size = new Size(
+                DetailsPanel.Width - DetailsPanel.Padding.Horizontal - 20,
+                DetailsPanel.Height / 10 - DetailsPanel.Padding.Vertical
+            );
+            const float fontSize = 18.0f;
             
+            Label label = new Label
+            {
+                Size = size,
+                Text = items[i].GetName(),
+                BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230),
+                ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel,
+                Location = new Point(
+                    DetailsPanel.Padding.Left,
+                    (size.Height + DetailsPanel.Padding.Vertical) * i
+                ),
+                Font = new Font(FontFamily.GenericSansSerif, fontSize),
+                TextAlign = ContentAlignment.MiddleCenter,
+            };
+
+            return label;
         }
     }
 }

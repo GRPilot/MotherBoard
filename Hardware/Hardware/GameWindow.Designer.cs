@@ -32,6 +32,7 @@
             this.BackButton = new System.Windows.Forms.Button();
             this.MainPanel = new System.Windows.Forms.Panel();
             this.DetailsPanel = new System.Windows.Forms.Panel();
+            this.FileListBox = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // BackButton
@@ -50,6 +51,7 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.AllowDrop = true;
             this.MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -68,8 +70,17 @@
             this.DetailsPanel.Location = new System.Drawing.Point(546, 12);
             this.DetailsPanel.Name = "DetailsPanel";
             this.DetailsPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.DetailsPanel.Size = new System.Drawing.Size(441, 434);
+            this.DetailsPanel.Size = new System.Drawing.Size(441, 342);
             this.DetailsPanel.TabIndex = 3;
+            // 
+            // FileListBox
+            // 
+            this.FileListBox.AllowDrop = true;
+            this.FileListBox.FormattingEnabled = true;
+            this.FileListBox.Location = new System.Drawing.Point(546, 360);
+            this.FileListBox.Name = "FileListBox";
+            this.FileListBox.Size = new System.Drawing.Size(441, 95);
+            this.FileListBox.TabIndex = 4;
             // 
             // GameWindow
             // 
@@ -77,6 +88,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(74)))));
             this.ClientSize = new System.Drawing.Size(999, 491);
+            this.Controls.Add(this.FileListBox);
             this.Controls.Add(this.DetailsPanel);
             this.Controls.Add(this.MainPanel);
             this.Controls.Add(this.BackButton);
@@ -92,5 +104,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Panel MainPanel;
         private System.Windows.Forms.Panel DetailsPanel;
+        private System.Windows.Forms.ListBox FileListBox;
     }
 }
