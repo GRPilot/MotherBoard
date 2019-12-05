@@ -18,6 +18,7 @@ namespace Hardware
     {
         bool formClosed;
         readonly Form mainFrom;
+        private int scroll = 1;
 
         Items[] items;
         Label[] labels;
@@ -26,15 +27,27 @@ namespace Hardware
         {
             mainFrom = OutMainForm;
             InitializeComponent();
-            DetailsPanel.AutoScroll = true;
-            DetailsPanel.HorizontalScroll.Enabled = false;
-            DetailsPanel.HorizontalScroll.Visible = false;
+            MainPanel.MouseWheel += MainPanel_MouseWheel;
             
             SetColorTheme(SettingWindow.BlackTheme);
             formClosed = true;
             LoadItems();
             ShowLabels(labels);
             
+        }
+
+        private void MainPanel_MouseWheel(object sender, MouseEventArgs e)
+        {
+            // если скролл находиться между началом и концом списка по выстое
+            if (scroll > -(labels.Length * labels[0].Height) &&
+                scroll < labels[0].Height)
+                scroll += e.Delta;
+            else if (scroll < -(labels.Length * labels[0].Height)) // Если ниже списка
+                scroll += Math.Abs(e.Delta);
+            else                                                   // Выше списка
+                scroll -= Math.Abs(e.Delta);        
+
+            ShowLabels(labels, scroll);
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -66,15 +79,19 @@ namespace Hardware
             }
         }
 
-        void ShowLabels(Label[] label)
-        {
-            
+        void ShowLabels(Label[] label, int scrollControl = 1)
+        { 
             for (int i = 0; i < items.Length; i++)
             {
-                //TODO: DragDrop labels
-                
-                
-                DetailsPanel.Controls.Add(label[i]);
+                MainPanel.Controls.Remove(label[i]);
+                label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
+                label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
+                label[i].Location = new Point(
+                    MainPanel.Width - label[i].Width - Padding.Horizontal * 5,
+                    (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
+                );
+ 
+                MainPanel.Controls.Add(label[i]);
             }
         }
         void LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\items.txt")
@@ -114,7 +131,10 @@ namespace Hardware
                 }
 
                 for (int i = 0; i < count; i++)
+                {
                     labels[i] = CreateLabel(i);
+                    ControlExtension.Draggable(labels[i], true);
+                }
             }
             catch (IOException e)
             {
@@ -124,11 +144,11 @@ namespace Hardware
         private Label CreateLabel(int i)
         {
             Size size = new Size(
-                DetailsPanel.Width - DetailsPanel.Padding.Horizontal - 20,
-                DetailsPanel.Height / 10 - DetailsPanel.Padding.Vertical
+                MainPanel.Width / 2 - MainPanel.Padding.Horizontal * 5,
+                MainPanel.Height / 10 - Padding.Vertical
             );
             const float fontSize = 18.0f;
-            
+
             Label label = new Label
             {
                 Size = size,
@@ -136,13 +156,12 @@ namespace Hardware
                 BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230),
                 ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel,
                 Location = new Point(
-                    DetailsPanel.Padding.Left,
-                    (size.Height + DetailsPanel.Padding.Vertical) * i
+                    MainPanel.Width - size.Width,
+                    (size.Height + Padding.Vertical) * i + Padding.Vertical
                 ),
                 Font = new Font(FontFamily.GenericSansSerif, fontSize),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
-
             return label;
         }
     }

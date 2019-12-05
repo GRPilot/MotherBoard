@@ -30,9 +30,9 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.BackButton = new System.Windows.Forms.Button();
+            this.PictureMB = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
-            this.DetailsPanel = new System.Windows.Forms.Panel();
-            this.FileListBox = new System.Windows.Forms.ListBox();
+            this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // BackButton
@@ -41,7 +41,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackButton.Location = new System.Drawing.Point(12, 456);
+            this.BackButton.Location = new System.Drawing.Point(15, 427);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(92, 23);
             this.BackButton.TabIndex = 1;
@@ -49,61 +49,48 @@
             this.BackButton.UseVisualStyleBackColor = false;
             this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
+            // PictureMB
+            // 
+            this.PictureMB.AllowDrop = true;
+            this.PictureMB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureMB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureMB.BackgroundImage")));
+            this.PictureMB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.PictureMB.Location = new System.Drawing.Point(6, 6);
+            this.PictureMB.Name = "PictureMB";
+            this.PictureMB.Size = new System.Drawing.Size(488, 400);
+            this.PictureMB.TabIndex = 2;
+            // 
             // MainPanel
             // 
-            this.MainPanel.AllowDrop = true;
-            this.MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.MainPanel.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("MainPanel.BackgroundImage")));
-            this.MainPanel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.MainPanel.Location = new System.Drawing.Point(12, 12);
+            this.MainPanel.Controls.Add(this.PictureMB);
+            this.MainPanel.Location = new System.Drawing.Point(6, 7);
             this.MainPanel.Name = "MainPanel";
-            this.MainPanel.Size = new System.Drawing.Size(528, 434);
-            this.MainPanel.TabIndex = 2;
-            // 
-            // DetailsPanel
-            // 
-            this.DetailsPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.DetailsPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.DetailsPanel.Location = new System.Drawing.Point(546, 12);
-            this.DetailsPanel.Name = "DetailsPanel";
-            this.DetailsPanel.Padding = new System.Windows.Forms.Padding(5);
-            this.DetailsPanel.Size = new System.Drawing.Size(441, 342);
-            this.DetailsPanel.TabIndex = 3;
-            // 
-            // FileListBox
-            // 
-            this.FileListBox.AllowDrop = true;
-            this.FileListBox.FormattingEnabled = true;
-            this.FileListBox.Location = new System.Drawing.Point(546, 360);
-            this.FileListBox.Name = "FileListBox";
-            this.FileListBox.Size = new System.Drawing.Size(441, 95);
-            this.FileListBox.TabIndex = 4;
+            this.MainPanel.Padding = new System.Windows.Forms.Padding(3);
+            this.MainPanel.Size = new System.Drawing.Size(987, 414);
+            this.MainPanel.TabIndex = 3;
             // 
             // GameWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(999, 491);
-            this.Controls.Add(this.FileListBox);
-            this.Controls.Add(this.DetailsPanel);
-            this.Controls.Add(this.MainPanel);
+            this.ClientSize = new System.Drawing.Size(999, 461);
             this.Controls.Add(this.BackButton);
-            this.MinimumSize = new System.Drawing.Size(1000, 530);
+            this.Controls.Add(this.MainPanel);
+            this.MinimumSize = new System.Drawing.Size(1000, 500);
             this.Name = "GameWindow";
+            this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "GameWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWindow_FormClosing);
+            this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.Button BackButton;
+        private System.Windows.Forms.Panel PictureMB;
         private System.Windows.Forms.Panel MainPanel;
-        private System.Windows.Forms.Panel DetailsPanel;
-        private System.Windows.Forms.ListBox FileListBox;
     }
 }

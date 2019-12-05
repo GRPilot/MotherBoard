@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Control.Draggable, Version=1.0.5049.269, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Control.Draggable.1.0.5049.269\lib\net35-Client\Control.Draggable.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -87,6 +90,7 @@
     <EmbeddedResource Include="SettingWindow.resx">
       <DependentUpon>SettingWindow.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

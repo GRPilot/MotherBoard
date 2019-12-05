@@ -20,3 +20,5 @@ C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.csproj.GenerateResource.cache
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.exe
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.pdb
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\bin\Debug\Control.Draggable.dll
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.csproj.CopyComplete
