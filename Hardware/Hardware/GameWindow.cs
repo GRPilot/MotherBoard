@@ -38,16 +38,20 @@ namespace Hardware
 
         private void MainPanel_MouseWheel(object sender, MouseEventArgs e)
         {
-            // если скролл находиться между началом и концом списка по выстое
-            if (scroll > -(labels.Length * labels[0].Height) &&
-                scroll < labels[0].Height)
-                scroll += e.Delta;
-            else if (scroll < -(labels.Length * labels[0].Height)) // Если ниже списка
-                scroll += Math.Abs(e.Delta);
-            else                                                   // Выше списка
-                scroll -= Math.Abs(e.Delta);        
+            int FullHeight = Padding.Vertical + (labels.Length + 3) * (labels[0].Height + MainPanel.Padding.Vertical);
+            if (Size.Height <= FullHeight)
+            {
+                // если скролл находиться между началом и концом списка по выстое
+                if (scroll > -(labels.Length * labels[0].Height) &&
+                    scroll < labels[0].Height)
+                    scroll += e.Delta;
+                else if (scroll < -(labels.Length * labels[0].Height)) // Если ниже списка
+                    scroll += Math.Abs(e.Delta);
+                else                                                   // Выше списка
+                    scroll -= Math.Abs(e.Delta);
 
-            ShowLabels(labels, scroll);
+                ShowLabels(labels, scroll);
+            }
         }
 
         private void BackButton_Click(object sender, EventArgs e)
@@ -81,7 +85,7 @@ namespace Hardware
 
         void ShowLabels(Label[] label, int scrollControl = 1)
         { 
-            for (int i = 0; i < items.Length; i++)
+            for (int i = 0; i < label.Length; i++)
             {
                 MainPanel.Controls.Remove(label[i]);
                 label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
@@ -90,8 +94,9 @@ namespace Hardware
                     MainPanel.Width - label[i].Width - Padding.Horizontal * 5,
                     (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
                 );
- 
+                
                 MainPanel.Controls.Add(label[i]);
+                label[i].BringToFront();
             }
         }
         void LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\items.txt")
@@ -164,5 +169,29 @@ namespace Hardware
             };
             return label;
         }
+
+        private void GameWindow_SizeChanged(object sender, EventArgs e) => ShowLabels(labels);
+        
+        private Label[] RemoveElement(Label[] list, int id)
+        {
+            Label[] output;
+            if (id >= 0 && id < list.Length && list.Length > 1)
+            {
+                MainPanel.Controls.Remove(list[id]);
+                output = new Label[list.Length - 1];
+
+                for (int i = id; i < list.Length - 1; i++)
+                    list[i] = list[i + 1];
+
+                for (int i = 0; i < output.Length; i++)
+                    output[i] = list[i];
+            }
+            else
+                return list;
+
+            return output;
+        }
+
+       
     }
 }

@@ -52,8 +52,10 @@
             // PictureMB
             // 
             this.PictureMB.AllowDrop = true;
-            this.PictureMB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.PictureMB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.PictureMB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(74)))));
             this.PictureMB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureMB.BackgroundImage")));
             this.PictureMB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.PictureMB.Location = new System.Drawing.Point(6, 6);
@@ -63,6 +65,9 @@
             // 
             // MainPanel
             // 
+            this.MainPanel.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.MainPanel.Controls.Add(this.PictureMB);
             this.MainPanel.Location = new System.Drawing.Point(6, 7);
             this.MainPanel.Name = "MainPanel";
@@ -83,6 +88,7 @@
             this.Padding = new System.Windows.Forms.Padding(3);
             this.Text = "GameWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWindow_FormClosing);
+            this.SizeChanged += new System.EventHandler(this.GameWindow_SizeChanged);
             this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
