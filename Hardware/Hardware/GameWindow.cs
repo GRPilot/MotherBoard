@@ -91,7 +91,7 @@ namespace Hardware
                 label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
                 label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
                 label[i].Location = new Point(
-                    MainPanel.Width - label[i].Width - Padding.Horizontal * 5,
+                    MainPanel.Width - label[i].Width,
                     (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
                 );
                 
@@ -146,10 +146,12 @@ namespace Hardware
                 MessageBox.Show(e.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+
         private Label CreateLabel(int i)
         {
             Size size = new Size(
-                MainPanel.Width / 2 - MainPanel.Padding.Horizontal * 5,
+                MainPanel.Width - PictureMB.Width - MainPanel.Padding.Horizontal - MainPanel.Margin.Horizontal,
                 MainPanel.Height / 10 - Padding.Vertical
             );
             const float fontSize = 18.0f;
@@ -161,12 +163,13 @@ namespace Hardware
                 BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230),
                 ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel,
                 Location = new Point(
-                    MainPanel.Width - size.Width,
+                    Width - size.Width,
                     (size.Height + Padding.Vertical) * i + Padding.Vertical
                 ),
                 Font = new Font(FontFamily.GenericSansSerif, fontSize),
                 TextAlign = ContentAlignment.MiddleCenter,
             };
+
             return label;
         }
 
@@ -192,6 +195,20 @@ namespace Hardware
             return output;
         }
 
-       
+        private void BiosPan_MouseEnter(object sender, EventArgs e)
+        {    
+            BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS_Blue.png");
+        }
+
+        private void BiosPan_MouseLeave(object sender, EventArgs e)
+        {
+            BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS.png");
+        }
+
+        private void BiosPan_DragEnter(object sender, DragEventArgs e)
+        {
+            // Реагирует на текст, перетаскиваемый в него, но не на объекты
+
+        }
     }
 }

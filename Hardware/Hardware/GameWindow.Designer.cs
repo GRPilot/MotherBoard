@@ -31,7 +31,9 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GameWindow));
             this.BackButton = new System.Windows.Forms.Button();
             this.PictureMB = new System.Windows.Forms.Panel();
+            this.BiosPan = new System.Windows.Forms.Panel();
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.PictureMB.SuspendLayout();
             this.MainPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -41,7 +43,7 @@
             this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
             this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackButton.Location = new System.Drawing.Point(15, 427);
+            this.BackButton.Location = new System.Drawing.Point(15, 551);
             this.BackButton.Name = "BackButton";
             this.BackButton.Size = new System.Drawing.Size(92, 23);
             this.BackButton.TabIndex = 1;
@@ -58,10 +60,25 @@
             this.PictureMB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(74)))));
             this.PictureMB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("PictureMB.BackgroundImage")));
             this.PictureMB.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.PictureMB.Location = new System.Drawing.Point(6, 6);
+            this.PictureMB.Controls.Add(this.BiosPan);
+            this.PictureMB.Location = new System.Drawing.Point(0, 0);
             this.PictureMB.Name = "PictureMB";
-            this.PictureMB.Size = new System.Drawing.Size(488, 400);
+            this.PictureMB.Size = new System.Drawing.Size(653, 538);
             this.PictureMB.TabIndex = 2;
+            // 
+            // BiosPan
+            // 
+            this.BiosPan.AllowDrop = true;
+            this.BiosPan.BackColor = System.Drawing.Color.Silver;
+            this.BiosPan.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("BiosPan.BackgroundImage")));
+            this.BiosPan.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.BiosPan.Location = new System.Drawing.Point(212, 337);
+            this.BiosPan.Name = "BiosPan";
+            this.BiosPan.Size = new System.Drawing.Size(109, 91);
+            this.BiosPan.TabIndex = 3;
+            this.BiosPan.DragEnter += new System.Windows.Forms.DragEventHandler(this.BiosPan_DragEnter);
+            this.BiosPan.MouseEnter += new System.EventHandler(this.BiosPan_MouseEnter);
+            this.BiosPan.MouseLeave += new System.EventHandler(this.BiosPan_MouseLeave);
             // 
             // MainPanel
             // 
@@ -72,7 +89,7 @@
             this.MainPanel.Location = new System.Drawing.Point(6, 7);
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Padding = new System.Windows.Forms.Padding(3);
-            this.MainPanel.Size = new System.Drawing.Size(987, 414);
+            this.MainPanel.Size = new System.Drawing.Size(1109, 538);
             this.MainPanel.TabIndex = 3;
             // 
             // GameWindow
@@ -80,7 +97,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(74)))));
-            this.ClientSize = new System.Drawing.Size(999, 461);
+            this.ClientSize = new System.Drawing.Size(1121, 585);
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.MainPanel);
             this.MinimumSize = new System.Drawing.Size(1000, 500);
@@ -89,6 +106,7 @@
             this.Text = "GameWindow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GameWindow_FormClosing);
             this.SizeChanged += new System.EventHandler(this.GameWindow_SizeChanged);
+            this.PictureMB.ResumeLayout(false);
             this.MainPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -98,5 +116,6 @@
         private System.Windows.Forms.Button BackButton;
         private System.Windows.Forms.Panel PictureMB;
         private System.Windows.Forms.Panel MainPanel;
+        private System.Windows.Forms.Panel BiosPan;
     }
 }
