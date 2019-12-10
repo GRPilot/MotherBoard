@@ -119,6 +119,234 @@
   <ItemGroup>
     <None Include="src\picture\MotherBoard\WithoutNames.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\13942.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\13942_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\13942_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\13942_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Audio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Audio_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Audio_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Audio_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\BIOS.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\BIOS_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\BIOS_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\BIOS_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CD.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CD_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CD_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CD_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CMOSPower.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CMOSPower_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CMOSPower_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\CMOSPower_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\DDR2.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\DDR2_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\DDR2_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\DDR2_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\ICH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\ICH_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\ICH_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\ICH_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\LAN.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\LAN_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\LAN_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\LAN_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\MCH.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\MCH_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\MCH_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\MCH_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Pata2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Pata2_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Pata2_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Pata2_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI1_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI1_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI1_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex16.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex16_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex16_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex16_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Power.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Power_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Power_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\Power_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SATA2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SATA2_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SATA2_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SATA2_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SOCET.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SOCET_blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SOCET_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\SOCET_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\superIO.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\superIO_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\superIO_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\superIO_Red.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\USB2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\USB2_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\USB2_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\USB2_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\VGA_DVI.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\VGA_DVI_Blue.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\VGA_DVI_Green.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\VGA_DVI_Red.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex1_Blue.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex1_Green.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="src\picture\elements\PCI-Ex1_Red.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

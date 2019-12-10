@@ -99,7 +99,7 @@ namespace Hardware
                 label[i].BringToFront();
             }
         }
-        void LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\items.txt")
+        void LoadItems(string file = @"X:\2-й курс\Силахина\Hardware\Hardware\Hardware\ItemsClass\Items.txt")
         {
             try
             {
@@ -197,12 +197,12 @@ namespace Hardware
 
         private void BiosPan_MouseEnter(object sender, EventArgs e)
         {    
-            BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS_Blue.png");
+            //BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS_Blue.png");
         }
 
         private void BiosPan_MouseLeave(object sender, EventArgs e)
         {
-            BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS.png");
+            //BiosPan.BackgroundImage = Image.FromFile(@"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\BIOS.png");
         }
 
         private void BiosPan_DragEnter(object sender, DragEventArgs e)
@@ -210,5 +210,7 @@ namespace Hardware
             // Реагирует на текст, перетаскиваемый в него, но не на объекты
 
         }
+
+       
     }
 }
