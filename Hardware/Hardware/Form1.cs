@@ -26,6 +26,13 @@ namespace Hardware
             gw.Show();
         }
 
+        private void LearnButton_Click(object sender, EventArgs e)
+        {
+            LearnWindow lw = new LearnWindow(this);
+            Hide();
+            lw.Show();
+        }
+
         private void SettingButton_Click(object sender, EventArgs e)
         {
             SettingWindow sw = new SettingWindow(this);
@@ -43,14 +50,15 @@ namespace Hardware
             if(isBlackColor)
             {
                 BackColor = SettingWindow.BlackColorMainPanel;
-                StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.WhiteColorButtons));
-                StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.BlackColorButtons));
+                LearnButton.ForeColor = (StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.WhiteColorButtons)));
+                LearnButton.BackColor = (StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.BlackColorButtons)));
+
             }
             else
             {
                 BackColor = SettingWindow.WhiteColorMainPanel;
-                StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.BlackColorButtons));
-                StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.WhiteColorButtons));
+                LearnButton.ForeColor = StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.BlackColorButtons));
+                LearnButton.BackColor = StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.WhiteColorButtons));
             }
         }
 
@@ -64,9 +72,12 @@ namespace Hardware
                     StartButton.ForeColor = Color.Red;
                     break;
                 case 1:
-                    SettingButton.ForeColor = Color.Red;
+                    LearnButton.ForeColor = Color.Red;
                     break;
                 case 2:
+                    SettingButton.ForeColor = Color.Red;
+                    break;
+                case 3:
                     ExitButton.ForeColor = Color.Red;
                     break;
 
@@ -87,10 +98,14 @@ namespace Hardware
                     StartButton.ForeColor = SettingWindow.BlackTheme ? White : Black;
                     break;
                 case 1:
+                    LearnButton.BackColor = SettingWindow.BlackTheme ? Black : White;
+                    LearnButton.ForeColor = SettingWindow.BlackTheme ? White : Black;
+                    break;
+                case 2:
                     SettingButton.BackColor = SettingWindow.BlackTheme ? Black : White;
                     SettingButton.ForeColor = SettingWindow.BlackTheme ? White : Black;
                     break;
-                case 2:
+                case 3:
                     ExitButton.BackColor = SettingWindow.BlackTheme ? Black : White;
                     ExitButton.ForeColor = SettingWindow.BlackTheme ? White : Black;
                     break;
@@ -102,13 +117,18 @@ namespace Hardware
 
         private int GetNumberOfButton(object sender)
         {
+            
             if (sender.ToString() == "System.Windows.Forms.Button, Text: Начать игру")
                 return 0;
-            if (sender.ToString() == "System.Windows.Forms.Button, Text: Настройки")
+            if (sender.ToString() == "System.Windows.Forms.Button, Text: Учиться")
                 return 1;
-            if (sender.ToString() == "System.Windows.Forms.Button, Text: Выход")
+            if (sender.ToString() == "System.Windows.Forms.Button, Text: Настройки")
                 return 2;
+            if (sender.ToString() == "System.Windows.Forms.Button, Text: Выход")
+                return 3;
             return -1;
         }
+
+        
     }
 }
