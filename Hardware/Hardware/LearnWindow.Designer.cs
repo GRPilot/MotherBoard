@@ -401,6 +401,7 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(985, 860);
             this.Name = "LearnWindow";
             this.RightToLeft = System.Windows.Forms.RightToLeft.No;

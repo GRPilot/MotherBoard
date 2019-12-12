@@ -52,7 +52,6 @@ namespace Hardware
                 BackColor = SettingWindow.BlackColorMainPanel;
                 LearnButton.ForeColor = (StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.WhiteColorButtons)));
                 LearnButton.BackColor = (StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.BlackColorButtons)));
-
             }
             else
             {
@@ -60,6 +59,7 @@ namespace Hardware
                 LearnButton.ForeColor = StartButton.ForeColor = (SettingButton.ForeColor = (ExitButton.ForeColor = SettingWindow.BlackColorButtons));
                 LearnButton.BackColor = StartButton.BackColor = (SettingButton.BackColor = (ExitButton.BackColor = SettingWindow.WhiteColorButtons));
             }
+            linkLabel1.LinkColor = linkLabel1.BackColor;
         }
 
         private void MainWindow_VisibleChanged(object sender, EventArgs e) => SetColorTheme(SettingWindow.BlackTheme);
@@ -129,6 +129,9 @@ namespace Hardware
             return -1;
         }
 
-        
+        private void linkLabel1_MouseEnter(object sender, EventArgs e) => linkLabel1.LinkColor = Color.Red;
+        private void linkLabel1_MouseLeave(object sender, EventArgs e) => linkLabel1.LinkColor = linkLabel1.BackColor;
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e) => System.Diagnostics.Process.Start("https://vk.com/rusan.rusik") ;
     }
 }
