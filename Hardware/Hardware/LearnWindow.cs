@@ -17,8 +17,8 @@ namespace Hardware
         {
             COE_STANDART,
             COE_RED,
-            COR_GREEN,
-            COR_BLUE
+            COE_GREEN,
+            COE_BLUE
         }
 
         Form MainForm;
@@ -61,29 +61,31 @@ namespace Hardware
                 Application.Exit();
         }
 
-        //TODO: доделать кнопки
         #region buttons
 
         private void Element_MouseEnter(object sender, EventArgs e)
         {
             PictureBox img = (PictureBox)sender;
-            img.Image = Image.FromFile(getWayToElement(img.Name, ColorsOfElements.COR_BLUE));
+            string imageLocation = getWayToElement(img.Name, ColorsOfElements.COE_BLUE);
+            if (imageLocation != null)
+                img.Image = Image.FromFile(imageLocation);
         }
         private void Element_MouseLeave(object sender, EventArgs e)
         {
             PictureBox img = (PictureBox)sender;
-            img.Image = Image.FromFile(getWayToElement(img.Name, ColorsOfElements.COE_STANDART));
+            string imageLocation = getWayToElement(img.Name, ColorsOfElements.COE_STANDART);
+            if (imageLocation != null)
+                img.Image = Image.FromFile(imageLocation);
+             
         }
-
-
-
-        #endregion
 
         private void Element_Click(object sender, EventArgs e)
         {
             PictureBox img = (PictureBox)sender;
             MessageBox.Show(GetElementInformation(img), img.Name, MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        #endregion
 
         private string GetElementInformation(PictureBox img)
         {
@@ -223,9 +225,7 @@ namespace Hardware
                     outString += @"Power";
                     break;
 
-                default:
-                    outString += @"NONE";
-                    break;
+                default: return null;
             }
 
             switch (color)
@@ -236,10 +236,10 @@ namespace Hardware
                 case ColorsOfElements.COE_RED:
                     outString += "_Red.";
                     break;
-                case ColorsOfElements.COR_GREEN:
+                case ColorsOfElements.COE_GREEN:
                     outString += "_Green.";
                     break;
-                case ColorsOfElements.COR_BLUE:
+                case ColorsOfElements.COE_BLUE:
                     outString += "_Blue.";
                     break;
             }
