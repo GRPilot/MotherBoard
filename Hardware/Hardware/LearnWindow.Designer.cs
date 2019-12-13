@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.BackButton = new System.Windows.Forms.Button();
             this.PCI_Ex1Picture = new System.Windows.Forms.PictureBox();
             this.CMOSPowPicture = new System.Windows.Forms.PictureBox();
             this.DDR2Picture = new System.Windows.Forms.PictureBox();
@@ -49,7 +50,6 @@
             this.LanPicture = new System.Windows.Forms.PictureBox();
             this.SocetPicture = new System.Windows.Forms.PictureBox();
             this.MainPicture = new System.Windows.Forms.PictureBox();
-            this.BackButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCI_Ex1Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CMOSPowPicture)).BeginInit();
@@ -102,6 +102,20 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 773);
             this.panel1.TabIndex = 0;
+            // 
+            // BackButton
+            // 
+            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.BackButton.Location = new System.Drawing.Point(12, 791);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 1;
+            this.BackButton.Text = "Назад";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // PCI_Ex1Picture
             // 
@@ -245,7 +259,7 @@
             // IE1394Picture
             // 
             this.IE1394Picture.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.IE1394Picture.Image = global::Hardware.Properties.Resources._13942;
+            this.IE1394Picture.Image = global::Hardware.Properties.Resources.IE1394;
             this.IE1394Picture.Location = new System.Drawing.Point(11, 149);
             this.IE1394Picture.Name = "IE1394Picture";
             this.IE1394Picture.Size = new System.Drawing.Size(39, 83);
@@ -377,20 +391,6 @@
             this.MainPicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.MainPicture.TabIndex = 0;
             this.MainPicture.TabStop = false;
-            // 
-            // BackButton
-            // 
-            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackButton.Location = new System.Drawing.Point(12, 791);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 1;
-            this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = false;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // LearnWindow
             // 

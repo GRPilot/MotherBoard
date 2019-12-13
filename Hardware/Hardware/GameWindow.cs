@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Hardware.ItemsClass;
 using System.IO;
-using Microsoft.VisualBasic.CompilerServices;
 
 namespace Hardware
 {
@@ -19,6 +12,8 @@ namespace Hardware
         bool formClosed;
         readonly Form mainFrom;
         private int scroll = 1;
+        private int CorrecrtScore   = 0;
+        private int IncorrecrtScore = 0;
 
         Items[] items;
         Label[] labels;
@@ -40,11 +35,14 @@ namespace Hardware
             SetColorTheme(SettingWindow.BlackTheme);
             formClosed = true;
             LoadItems();
-            ShowLabels(labels);
+            ShowLabels(labels, 1, true);
             
         }
 
-        private void MainPanel_MouseWheel(object sender, MouseEventArgs e)
+        #region list
+        
+
+        private void    MainPanel_MouseWheel(object sender, MouseEventArgs e)
         {
             int FullHeight = Padding.Vertical + (labels.Length + 3) * (labels[0].Height + MainPanel.Padding.Vertical);
             if (Size.Height <= FullHeight)
@@ -61,53 +59,7 @@ namespace Hardware
                 ShowLabels(labels, scroll);
             }
         }
-
-        private void BackButton_Click(object sender, EventArgs e)
-        {
-            formClosed = false;
-            mainFrom.Show();
-            Close();
-        }
-
-        private void GameWindow_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            if (formClosed)
-                mainFrom.Close();
-        }
-
-        public void SetColorTheme(bool isBlackColor)
-        {
-            if (isBlackColor)
-            {
-                BackColor = SettingWindow.BlackColorMainPanel;
-                BackButton.BackColor = SettingWindow.BlackColorButtons;
-                BackButton.ForeColor = SettingWindow.WhiteColorButtons;
-            }
-            else
-            {
-                BackColor = SettingWindow.WhiteColorMainPanel;
-                BackButton.BackColor = SettingWindow.WhiteColorButtons;
-                BackButton.ForeColor = SettingWindow.BlackColorButtons;
-            }
-        }
-
-        void ShowLabels(Label[] label, int scrollControl = 1)
-        { 
-            for (int i = 0; i < label.Length; i++)
-            {
-                MainPanel.Controls.Remove(label[i]);
-                label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
-                label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
-                label[i].Location = new Point(
-                    MainPanel.Width - label[i].Width,
-                    (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
-                );
-                
-                MainPanel.Controls.Add(label[i]);
-                label[i].BringToFront();
-            }
-        }
-        void LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\Items.txt")
+        private void    LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\Items.txt")
         {
             try
             {
@@ -146,9 +98,9 @@ namespace Hardware
                 for (int i = 0; i < count; i++)
                 {
                     labels[i] = CreateLabel(i);
-                    ControlExtension.Draggable(labels[i], true);
-                    labels[i].MouseDown += GameWindow_MouseDown;
-                    labels[i].MouseUp += GameWindow_MouseUp;
+                    //labels[i].Draggable(true);
+                    labels[i].MouseDown += Item_MouseDown;
+                    labels[i].MouseUp   += Item_MouseUp;
                 }
             }
             catch (IOException e)
@@ -156,26 +108,7 @@ namespace Hardware
                 MessageBox.Show(e.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
-        #region Returning Elements
-
-        Point startPos;
-
-        private void GameWindow_MouseDown(object sender, MouseEventArgs e)
-        {
-            Label obj = (Label)sender;
-            startPos = new Point(obj.Location.X, obj.Location.Y);
-        }
-
-        private void GameWindow_MouseUp(object sender, MouseEventArgs e)
-        {
-            Label obj = (Label)sender;
-            obj.Location = startPos;
-        }
-
-        #endregion
-
-        private Label CreateLabel(int i)
+        private Label   CreateLabel(int i)
         {
             Size size = new Size(
                 MainPanel.Width - PictureMB.Width - MainPanel.Padding.Horizontal - MainPanel.Margin.Horizontal,
@@ -199,15 +132,21 @@ namespace Hardware
 
             return label;
         }
-
-        private void GameWindow_SizeChanged(object sender, EventArgs e) => ShowLabels(labels);
-        
-        private Label[] RemoveElement(Label[] list, int id)
+        private Label[] RemoveElement(Label[] list, string name)
         {
             Label[] output;
-            if (id >= 0 && id < list.Length && list.Length > 1)
+            int id = -1;
+
+            for (int i = 0; i < list.Length; i++)
+                if (list[i].Text == name)
+                {
+                    MainPanel.Controls.Remove(list[i]);
+                    id = i;
+                    break;
+                }
+
+            if (id != -1)
             {
-                MainPanel.Controls.Remove(list[id]);
                 output = new Label[list.Length - 1];
 
                 for (int i = id; i < list.Length - 1; i++)
@@ -216,94 +155,67 @@ namespace Hardware
                 for (int i = 0; i < output.Length; i++)
                     output[i] = list[i];
             }
-            else
-                return list;
+            else return list;
 
             return output;
         }
-
-        // ПОДУМАЙ, НИНАД ИЛИ НАД
-
-        private void Picture_DragEnter(object sender, DragEventArgs e)
+        private string  GetElementName(Panel pan)
         {
-            Panel obj = (Panel)sender;
-            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_BLUE);
-            if (locationOfImg != null)
-                obj.BackgroundImage = Image.FromFile(locationOfImg);
-            e.Effect = DragDropEffects.Move;
-        }
-
-        private void Picture_DragDrop(object sender, DragEventArgs e)
-        {
-            Panel obj = (Panel)sender;
-            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_RED);
-            if (locationOfImg != null)
-                obj.BackgroundImage = Image.FromFile(locationOfImg);
-
-        }
-
-        private string GetElementInformation(PictureBox img)
-        {
-            switch (img.Name)
+            switch (pan.Name)
             {
                 case "SocetPicture":
-                    return "SOCKET (сокет) - гнездо, в которое устанавливается микросхема со штырьковыми выводами.";
+                    return "Сокет процессора.";
 
                 case "VGA_DVIPicture":
-                    return "VGA (VIDEO GRAFICS ARRAY, видеографическая решетка) - видеоадаптер, доддерживающий текстовый и графический режимы.";
+                    return "Разъем VGA(DVI) монитора";
 
                 case "LanPicture":
-                    return "LAN (LOCAL AREA NETWORK, локальная вычислительная сеть) - сеть, ограниченная пределами определенной территории.";
+                    return "Разъем локальной сети";
 
                 case "AudioPicture":
-                    return "Разъем аудио";
+                    return "Audio";
 
                 case "SuperIOPicture":
-                    return "(контроллер ввода/вывода) - объединяет интерфейсы различных низкочастотных устройств. Включает в себя следующие функции:\n" +
-                           "1.контроллер дисковода флоппи;\n" +
-                           "2.параллельный порт(LPT)(обычно используется для принтеров);\n" +
-                           "3.один или более последовательных(COM) портов;\n" +
-                           "4.интерфейс мыши;\n" +
-                           "5.интерфейс клавиатуры.";
+                    return "Super I/O";
 
                 case "CDPicture":
-                    return "CD";
+                    return "Разъем CD";
 
                 case "IE1394Picture":
-                    return "IEEE 1394 (FireWire, i - Link) - последовательная высокоскоростная шина, предназначенная для обмена цифровой информацией между компьютером и другими электронными устройствами.";
+                    return "IEEE 1394";
 
                 case "USBPicture":
-                    return "Порты подключения USB слотов";
+                    return "Разъемы USB";
 
                 case "PCI1Picture":
-                    return "PCI (Periphecal Component Interconnect) - соединение периферийных компонентов, параллельная мультиплексная шина общего назначения с пакетной передачей данных.";
+                    return "Разъем PCI1";
 
                 case "PCI_Ex1Picture":
-                    return "PCI (Periphecal Component Interconnect) - соединение периферийных компонентов, параллельная мультиплексная шина общего назначения с пакетной передачей данных.";
+                    return "Разъем PCI-Ex1";
 
                 case "PCI_Ex16Picture":
-                    return "PCI(Periphecal Component Interconnect) - соединение периферийных компонентов, параллельная мультиплексная шина общего назначения с пакетной передачей данных.";
+                    return "Разъем PCI-Ex16";
 
                 case "MCHPicture":
-                    return "Контроллер-концентратор памяти— северный мост (англ. northbridge). Обеспечивает взаимодействие центрального процессора (ЦП) с памятью и видеоадаптером (PCI Express).";
+                    return "MCH (Memory Controller Hub) ";
 
                 case "SataPicture":
-                    return "SATA (Serial Advanced Technologe Attanchment) - последовательная дифференциальная универсальная шина (интерфейс) жесткого диска.";
+                    return "Разъемы SATA";
 
                 case "ICHPicture":
-                    return "Контроллер-концентратор ввода-вывода — южный мост (англ. southbridge). Обеспечивает взаимодействие между ЦП и жестким диском, картами PCI, интерфейсами IDE, SATA, USB и пр. ";
+                    return "ICH (I/O Controller Hub)";
 
                 case "BIOSPicture":
                     return "BIOS";
 
                 case "CMOSPowPicture":
-                    return "CMOS (Complementaty Metal-Oxide Semiconductor, комплиментарный металло-оксидный полупроводник (КМОП)) - технология изготовления схем, используемая  для хранения  некоторых параметров компьютера при отключении его блока питания. Микросхема CMOS памяти использует в качестве источника питания -батарею.";
+                    return "Питание CMOS";
 
                 case "DDR2Picture":
-                    return "DDR2 (Double-Data-Rate Two Synchronous Dynamic Random Access Memory — синхронная динамическая память с произвольным доступом и удвоенной скоростью передачи данных, второе поколение) — это тип оперативной памяти используемой в вычислительной технике в качестве оперативной и видеопамяти.Внешне - 240 контактов(по 120 с каждой стороны). ";
+                    return "DDR2 SDRAM ";
 
                 case "PataPicture":
-                    return "PATA (Parallel Advanced Technology Attachment) - параллельная шина (интерфейс) жесткого диска.";
+                    return "Разъем PATA (IDE)";
 
                 case "PowerPicture":
                     return "Разъем питания";
@@ -314,69 +226,69 @@ namespace Hardware
 
             }
         }
-        private string getWayToElement(string name, ColorsOfElements color)
+        private string  getWayToElement(string name, ColorsOfElements color)
         {
             // CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ
-            string outString = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements\";
+            string outString = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\";
 
             switch (name)
             {
                 case "SocetPicture":
-                    outString += @"SOCET";
+                    outString += @"_SOCET";
                     break;
                 case "VGA_DVIPicture":
-                    outString += @"VGA_DVI";
+                    outString += @"_VGA_DVI";
                     break;
                 case "LanPicture":
-                    outString += @"LAN";
+                    outString += @"_LAN";
                     break;
                 case "AudioPicture":
-                    outString += @"Audio";
+                    outString += @"_Audio";
                     break;
                 case "SuperIOPicture":
-                    outString += @"SuperIO";
+                    outString += @"_SuperIO";
                     break;
                 case "CDPicture":
-                    outString += @"CD";
+                    outString += @"_CD";
                     break;
                 case "IE1394Picture":
-                    outString += @"13942";
+                    outString += @"_IE1394";
                     break;
                 case "USBPicture":
-                    outString += @"USB2";
+                    outString += @"_USB2";
                     break;
                 case "PCI1Picture":
-                    outString += @"PCI1";
+                    outString += @"_PCI1";
                     break;
                 case "PCI_Ex1Picture":
-                    outString += @"PCI-Ex1";
+                    outString += @"_PCI-Ex1";
                     break;
                 case "PCI_Ex16Picture":
-                    outString += @"PCI-Ex16";
+                    outString += @"_PCI-Ex16";
                     break;
                 case "MCHPicture":
-                    outString += @"MCH";
+                    outString += @"_MCH";
                     break;
                 case "SataPicture":
-                    outString += @"SATA2";
+                    outString += @"_SATA2";
                     break;
                 case "ICHPicture":
-                    outString += @"ICH";
+                    outString += @"_ICH";
                     break;
                 case "BIOSPicture":
-                    outString += @"BIOS";
+                    outString += @"_BIOS";
                     break;
                 case "CMOSPowPicture":
-                    outString += @"CMOSPower";
+                    outString += @"_CMOSPower";
                     break;
                 case "DDR2Picture":
-                    outString += @"DDR2";
+                    outString += @"_DDR2";
                     break;
                 case "PataPicture":
-                    outString += @"Pata2";
+                    outString += @"_Pata2";
                     break;
                 case "PowerPicture":
-                    outString += @"Power";
+                    outString += @"_Power";
                     break;
 
                 default: return null;
@@ -405,6 +317,149 @@ namespace Hardware
 
             return outString;
         }
+
+        #endregion
+
+        #region UI
+        private void BackButton_Click(object sender, EventArgs e)
+        {
+            formClosed = false;
+            mainFrom.Show();
+            Close();
+        }
+        private void GameWindow_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (formClosed)
+                mainFrom.Close();
+        }
+        public  void SetColorTheme(bool isBlackColor)
+        {
+            if (isBlackColor)
+            {
+                BackColor = SettingWindow.BlackColorMainPanel;
+                BackButton.BackColor = SettingWindow.BlackColorButtons;
+                BackButton.ForeColor = SettingWindow.WhiteColorButtons;
+                PictureMB.BackColor  = SettingWindow.BlackColorMainPanel;
+            }
+            else
+            {
+                BackColor = SettingWindow.WhiteColorMainPanel;
+                BackButton.BackColor = SettingWindow.WhiteColorButtons;
+                BackButton.ForeColor = SettingWindow.BlackColorButtons;
+                PictureMB.BackColor = SettingWindow.WhiteColorMainPanel;
+            }
+        }
+        private void ShowLabels(Label[] label, int scrollControl = 1, bool isRandomize = false)
+        {
+            if (isRandomize)
+            {
+                Random rand = new Random(DateTime.Now.Second);
+
+                for (int i = 0; i < label.Length; i++)
+                {
+                    Label temp = label[i];
+                    int newPos = rand.Next(0, label.Length - 1);
+                    label[i] = label[newPos];
+                    label[newPos] = temp;
+                }
+            }
+            for (int i = 0; i < label.Length; i++)
+            {
+                MainPanel.Controls.Remove(label[i]);
+                label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
+                label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
+                label[i].Location = new Point(
+                    MainPanel.Width - label[i].Width,
+                    (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
+                );
+                
+                MainPanel.Controls.Add(label[i]);
+                label[i].BringToFront();
+            }
+        }
+        private void GameWindow_SizeChanged(object sender, EventArgs e) => ShowLabels(labels);
+        private void Element_MouseEnter(object sender, EventArgs e)
+        {
+            Panel obj = (Panel)sender;
+            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_BLUE);
+            if (locationOfImg != null)
+                obj.BackgroundImage = Image.FromFile(locationOfImg);
+        }
+        private void Element_MouseLeave(object sender, EventArgs e)
+        {
+            Panel obj = (Panel)sender;
+            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_STANDART);
+            if (locationOfImg != null)
+                obj.BackgroundImage = Image.FromFile(locationOfImg);
+        }
+
+        #endregion
+
+        #region Drag&Drop
+
+        private void Picture_DragEnter(object sender, DragEventArgs e)
+        {
+            Panel obj = (Panel)sender;
+            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_BLUE);
+            
+            if (locationOfImg != null)
+                obj.BackgroundImage = Image.FromFile(locationOfImg);
+
+            if (e.Data.GetDataPresent(DataFormats.Text, true))
+                e.Effect = DragDropEffects.All;
+        }
+        private void Picture_DragLeave(object sender, EventArgs e)
+        {
+            Panel obj = (Panel)sender;
+            string locationOfImg = getWayToElement(obj.Name, ColorsOfElements.COE_STANDART);
+            if (locationOfImg != null)
+                obj.BackgroundImage = Image.FromFile(locationOfImg);
+        }
+        private void Picture_DragDrop(object sender, DragEventArgs e)
+        {
+            Panel obj = (Panel)sender;
+            string nameOfElem = GetElementName(obj);
+            string nameOfItem = e.Data.GetData(DataFormats.Text).ToString();
+
+            Text = nameOfElem + ' ' + nameOfItem;
+
+            obj.AllowDrop = false;
+            obj.Enabled   = false;
+
+            if (nameOfElem == nameOfItem)
+            {
+                obj.BackgroundImage = Image.FromFile(getWayToElement(obj.Name, ColorsOfElements.COE_GREEN));
+                CorrecrtScore++;
+            }
+            else
+            {
+                obj.BackgroundImage = Image.FromFile(getWayToElement(obj.Name, ColorsOfElements.COE_RED));
+                IncorrecrtScore++;
+            }
+
+            labels = RemoveElement(labels, nameOfElem);
+            ShowLabels(labels);
+
+            if (CorrecrtScore + IncorrecrtScore == 19)
+            {
+                ResultWindow rw = new ResultWindow(CorrecrtScore, IncorrecrtScore, this);
+                Enabled = false;
+                rw.Show();
+            }
+        }
+
+        private void Item_MouseUp(object sender, MouseEventArgs e)
+        {
+            Label item = (Label)sender;
+
+        }
+        private void Item_MouseDown(object sender, MouseEventArgs e)
+        {
+            Label item = (Label)sender;
+            item.DoDragDrop(item.Text, DragDropEffects.Move);
+        }
+
+        #endregion
 
         
     }

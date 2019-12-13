@@ -1,11 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Hardware
@@ -186,7 +180,7 @@ namespace Hardware
                     outString += @"CD";
                     break;
                 case "IE1394Picture":
-                    outString += @"13942";
+                    outString += @"IE1394";
                     break;
                 case "USBPicture":
                     outString += @"USB2";

@@ -121,14 +121,26 @@
   <data name="MCH_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\MCH_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_SOCET_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_SOCET_blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="CD_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\CD_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="SOCET_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SOCET_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_Power" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Power.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCI-Ex16_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI-Ex16_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="USB2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\USB2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_DDR2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_DDR2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Power_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Power_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -142,14 +154,20 @@
   <data name="SOCET_blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SOCET_blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13942" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\13942.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="BIOS_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\BIOS_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_ICH_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_ICH_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_SOCET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_SOCET.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pata2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Pata2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_CD_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_CD_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Power" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Power.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -160,11 +178,17 @@
   <data name="DDR2_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\DDR2_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICH_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\ICH_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_LAN_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_LAN_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_MCH_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_MCH_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CD" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\CD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_PCI1_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI1_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCI-Ex1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI-Ex1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -175,26 +199,41 @@
   <data name="LAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\LAN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_Pata2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Pata2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCI-Ex16_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI-Ex16_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ICH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\ICH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_ICH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_ICH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="VGA_DVI_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\VGA_DVI_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="SOCET" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\SOCET.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_PCI-Ex1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI-Ex1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="ICH_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\ICH_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="MCH_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\MCH_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_superIO_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_superIO_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE1394_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\IE1394_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Audio" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Audio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="superIO_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\superIO_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_Pata2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Pata2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ICH_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\ICH_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VGA_DVI_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\VGA_DVI_Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,23 +247,35 @@
   <data name="CD_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\CD_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_PCI-Ex16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI-Ex16.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="CMOSPower_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\CMOSPower_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DDR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\DDR2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_Power_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Power_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_IE1394_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_IE1394_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Audio_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Audio_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_PCI-Ex1_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI-Ex1_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SATA2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SATA2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13942_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\13942_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="Pata2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Pata2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_MCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_MCH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="DDR2_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\DDR2_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,8 +283,14 @@
   <data name="ICH_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\ICH_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="IE1394_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\IE1394_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="MCH" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\MCH.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_IE1394_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_IE1394_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCI1_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI1_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -244,29 +301,41 @@
   <data name="DDR2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\DDR2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="MCH_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\MCH_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="LAN_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\LAN_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="superIO_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\superIO_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="LAN_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\LAN_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="CD_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\CD_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_PCI-Ex16_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI-Ex16_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="USB2_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\USB2_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_DDR2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_DDR2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="SOCET_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SOCET_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="ICH_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\ICH_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_Audio_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Audio_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BIOS_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\BIOS_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_Audio" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_Audio.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="WithNames" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\MotherBoard\WithNames.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_BIOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_BIOS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="superIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\superIO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -280,17 +349,26 @@
   <data name="PCI1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="superIO_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\superIO_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCI1_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI1_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CMOSPower" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\CMOSPower.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="LAN_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\LAN_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_PCI1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_PCI1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="BIOS" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\BIOS.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="PCI-Ex1_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\PCI-Ex1_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_VGA_DVI_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_VGA_DVI_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="VGA_DVI" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\VGA_DVI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -301,17 +379,23 @@
   <data name="VGA_DVI_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\VGA_DVI_Blue.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13942_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\13942_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_IE1394_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_IE1394_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="PCI1_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI1_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="LAN_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\LAN_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_USB2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_USB2.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE1394_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\IE1394_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Audio_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Audio_Red.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_BIOS_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_BIOS_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="CMOSPower_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\CMOSPower_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,11 +412,20 @@
   <data name="SATA2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SATA2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="SOCET" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\SOCET.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Power_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Power_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_superIO" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_superIO.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="Pata2_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Pata2_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_USB2_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_USB2_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Audio_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\Audio_Green.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -343,13 +436,34 @@
   <data name="SATA2_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\SATA2_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="_CD" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_CD.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IE1394" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\IE1394.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="PCI-Ex1_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\src\picture\elements\PCI-Ex1_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="13942_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\13942_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="USB2_Green" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\USB2_Green.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="superIO_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\src\picture\elements\superIO_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="_VGA_DVI" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_VGA_DVI.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="PCI-Ex1_Red" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements\PCI-Ex1_Red.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_IE1394" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_IE1394.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_LAN" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_LAN.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_CMOSPower" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_CMOSPower.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="_CMOSPower_Blue" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\src\picture\elements_without_names\_CMOSPower_Blue.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

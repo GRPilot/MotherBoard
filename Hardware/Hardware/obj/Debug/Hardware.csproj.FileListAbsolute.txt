@@ -23,3 +23,4 @@ C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\bin\Debug\Control.Draggable.dll
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.csproj.CopyComplete
 C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.LearnWindow.resources
+C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\obj\Debug\Hardware.ResultWindow.resources
