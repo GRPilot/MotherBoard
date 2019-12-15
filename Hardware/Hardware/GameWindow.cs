@@ -14,6 +14,7 @@ namespace Hardware
         private int scroll = 1;
         private int CorrecrtScore   = 0;
         private int IncorrecrtScore = 0;
+        private string directory;
 
         Items[] items;
         Label[] labels;
@@ -31,7 +32,7 @@ namespace Hardware
             mainFrom = OutMainForm;
             InitializeComponent();
             MainPanel.MouseWheel += MainPanel_MouseWheel;
-            
+            directory = Environment.CurrentDirectory;
             SetColorTheme(SettingWindow.BlackTheme);
             formClosed = true;
             LoadItems();
@@ -59,10 +60,12 @@ namespace Hardware
                 ShowLabels(labels, scroll);
             }
         }
-        private void    LoadItems(string file = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\ItemsClass\Items.txt")
+        private void    LoadItems(string file = null)
         {
             try
             {
+                if (file == null)
+                    file = directory + @"\Items.txt";
                 int count = 0;
                 string buff = "";
                 StreamReader stream = new StreamReader(file);
@@ -229,7 +232,7 @@ namespace Hardware
         private string  getWayToElement(string name, ColorsOfElements color)
         {
             // CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ
-            string outString = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements_without_names\";
+            string outString = directory + @"\elements_without_names\";
 
             switch (name)
             {
@@ -351,30 +354,37 @@ namespace Hardware
         }
         private void ShowLabels(Label[] label, int scrollControl = 1, bool isRandomize = false)
         {
-            if (isRandomize)
+            try
             {
-                Random rand = new Random(DateTime.Now.Second);
+                if (isRandomize)
+                {
+                    Random rand = new Random(DateTime.Now.Second);
 
+                    for (int i = 0; i < label.Length; i++)
+                    {
+                        Label temp = label[i];
+                        int newPos = rand.Next(0, label.Length - 1);
+                        label[i] = label[newPos];
+                        label[newPos] = temp;
+                    }
+                }
                 for (int i = 0; i < label.Length; i++)
                 {
-                    Label temp = label[i];
-                    int newPos = rand.Next(0, label.Length - 1);
-                    label[i] = label[newPos];
-                    label[newPos] = temp;
+                    MainPanel.Controls.Remove(label[i]);
+                    label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
+                    label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
+                    label[i].Location = new Point(
+                        MainPanel.Width - label[i].Width,
+                        (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
+                    );
+
+                    MainPanel.Controls.Add(label[i]);
+                    label[i].BringToFront();
                 }
             }
-            for (int i = 0; i < label.Length; i++)
+            catch (Exception exp)
             {
-                MainPanel.Controls.Remove(label[i]);
-                label[i].BackColor = SettingWindow.BlackTheme ? Color.FromArgb(78, 78, 80) : Color.FromArgb(230, 230, 230);
-                label[i].ForeColor = SettingWindow.BlackTheme ? SettingWindow.WhiteColorButtons : SettingWindow.BlackColorMainPanel;
-                label[i].Location = new Point(
-                    MainPanel.Width - label[i].Width,
-                    (label[i].Height + Padding.Vertical) * i + Padding.Vertical + scrollControl
-                );
-                
-                MainPanel.Controls.Add(label[i]);
-                label[i].BringToFront();
+                MessageBox.Show(exp.Message, "Ошибка!", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void GameWindow_SizeChanged(object sender, EventArgs e) => ShowLabels(labels);

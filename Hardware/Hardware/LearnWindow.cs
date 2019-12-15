@@ -6,6 +6,7 @@ namespace Hardware
 {
     public partial class LearnWindow : Form
     {
+        string directory = Environment.CurrentDirectory;
 
         enum ColorsOfElements
         {
@@ -156,8 +157,7 @@ namespace Hardware
 
         private string getWayToElement(string name, ColorsOfElements color)
         {
-            // CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ CHANGE ИЗМЕНИТЬ
-            string outString = @"C:\Users\79995\Documents\GitHub\MotherBoard\Hardware\Hardware\src\picture\elements\";
+            string outString = directory + @"\elements\";
 
             switch (name)
             {

@@ -28,11 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SettingWindow));
             this.BackButton = new System.Windows.Forms.Button();
             this.BackPanel = new System.Windows.Forms.Panel();
-            this.DesignLabel = new System.Windows.Forms.Label();
-            this.TitleLabel = new System.Windows.Forms.Label();
             this.ChangeColorButton = new System.Windows.Forms.Button();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.DesignLabel = new System.Windows.Forms.Label();
             this.BackPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -63,28 +64,6 @@
             this.BackPanel.Size = new System.Drawing.Size(259, 236);
             this.BackPanel.TabIndex = 1;
             // 
-            // DesignLabel
-            // 
-            this.DesignLabel.AutoSize = true;
-            this.DesignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DesignLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.DesignLabel.Location = new System.Drawing.Point(3, 52);
-            this.DesignLabel.Name = "DesignLabel";
-            this.DesignLabel.Size = new System.Drawing.Size(155, 20);
-            this.DesignLabel.TabIndex = 1;
-            this.DesignLabel.Text = "Цвет оформления:";
-            // 
-            // TitleLabel
-            // 
-            this.TitleLabel.AutoSize = true;
-            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.TitleLabel.ForeColor = System.Drawing.SystemColors.Control;
-            this.TitleLabel.Location = new System.Drawing.Point(38, 0);
-            this.TitleLabel.Name = "TitleLabel";
-            this.TitleLabel.Size = new System.Drawing.Size(191, 39);
-            this.TitleLabel.TabIndex = 2;
-            this.TitleLabel.Text = "Настройки";
-            // 
             // ChangeColorButton
             // 
             this.ChangeColorButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
@@ -101,6 +80,28 @@
             this.ChangeColorButton.UseVisualStyleBackColor = false;
             this.ChangeColorButton.Click += new System.EventHandler(this.ChangeColorButton_Click);
             // 
+            // TitleLabel
+            // 
+            this.TitleLabel.AutoSize = true;
+            this.TitleLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.TitleLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.TitleLabel.Location = new System.Drawing.Point(38, 0);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(191, 39);
+            this.TitleLabel.TabIndex = 2;
+            this.TitleLabel.Text = "Настройки";
+            // 
+            // DesignLabel
+            // 
+            this.DesignLabel.AutoSize = true;
+            this.DesignLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DesignLabel.ForeColor = System.Drawing.SystemColors.Control;
+            this.DesignLabel.Location = new System.Drawing.Point(3, 52);
+            this.DesignLabel.Name = "DesignLabel";
+            this.DesignLabel.Size = new System.Drawing.Size(155, 20);
+            this.DesignLabel.TabIndex = 1;
+            this.DesignLabel.Text = "Цвет оформления:";
+            // 
             // SettingWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -109,6 +110,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.BackPanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimumSize = new System.Drawing.Size(300, 300);
             this.Name = "SettingWindow";

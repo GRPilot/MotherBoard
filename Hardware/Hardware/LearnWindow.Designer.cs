@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LearnWindow));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.BackButton = new System.Windows.Forms.Button();
             this.PCI_Ex1Picture = new System.Windows.Forms.PictureBox();
             this.CMOSPowPicture = new System.Windows.Forms.PictureBox();
             this.DDR2Picture = new System.Windows.Forms.PictureBox();
@@ -50,6 +50,7 @@
             this.LanPicture = new System.Windows.Forms.PictureBox();
             this.SocetPicture = new System.Windows.Forms.PictureBox();
             this.MainPicture = new System.Windows.Forms.PictureBox();
+            this.BackButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PCI_Ex1Picture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.CMOSPowPicture)).BeginInit();
@@ -102,20 +103,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 773);
             this.panel1.TabIndex = 0;
-            // 
-            // BackButton
-            // 
-            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
-            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.BackButton.Location = new System.Drawing.Point(12, 791);
-            this.BackButton.Name = "BackButton";
-            this.BackButton.Size = new System.Drawing.Size(75, 23);
-            this.BackButton.TabIndex = 1;
-            this.BackButton.Text = "Назад";
-            this.BackButton.UseVisualStyleBackColor = false;
-            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
             // 
             // PCI_Ex1Picture
             // 
@@ -392,6 +379,20 @@
             this.MainPicture.TabIndex = 0;
             this.MainPicture.TabStop = false;
             // 
+            // BackButton
+            // 
+            this.BackButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.BackButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(68)))), ((int)(((byte)(68)))));
+            this.BackButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackButton.ForeColor = System.Drawing.SystemColors.Control;
+            this.BackButton.Location = new System.Drawing.Point(12, 791);
+            this.BackButton.Name = "BackButton";
+            this.BackButton.Size = new System.Drawing.Size(75, 23);
+            this.BackButton.TabIndex = 1;
+            this.BackButton.Text = "Назад";
+            this.BackButton.UseVisualStyleBackColor = false;
+            this.BackButton.Click += new System.EventHandler(this.BackButton_Click);
+            // 
             // LearnWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -401,6 +402,7 @@
             this.Controls.Add(this.BackButton);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(985, 860);
             this.Name = "LearnWindow";
